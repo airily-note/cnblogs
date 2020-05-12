@@ -14,6 +14,9 @@ a {
         text-decoration: none !important;
     }
 }
+li {
+    list-style: none;
+}
 
 .blogStats,
 .dayTitle,
@@ -78,10 +81,12 @@ a {
             margin-top: 12px;
 
             a {
-                color: @blog-title-color;
+                color: #404040;
             }
         }
     }
+	
+	/* 导航 */
 
     #navigator {
         height: inherit;
@@ -91,13 +96,23 @@ a {
         background-color: transparent;
         display: inline-block;
         z-index: 999;
+		clear: both;
     }
 
+    /* 菜单 */
     #navList {
         height: inherit;
+        min-height: 30px;
+        float: left;
+        margin: 0px;
 
+        a {
+            float: left;
+            text-align: center;
+        }
         &>li {
             position: relative;
+            float: left;
 
             &:hover i {
                 width: 100%;
@@ -194,6 +209,9 @@ a {
 
     #mainContent {
         background-color: transparent;
+		float: right;
+		margin-left: -25em;
+		width: 100%;
 
         .forFlow {
             margin: 0px auto;
@@ -211,6 +229,8 @@ a {
     display: none;
     min-height: 750px;
     padding: 0px 15px 0px 0px;
+	float: left;
+	width: 230px;
 
     #profile_block {
         margin-top: 10px;
@@ -706,12 +726,16 @@ a {
     }
 }
 
+/* 页脚内容 */
+
 #footer {
     border-top: 1px solid @blog-border-color;
     font-size: 13px;
     font-weight: 300;
     margin: 10px 0px 0px 0px;
     padding: 10px 0px;
+	text-align: center;
+    min-height: 15px;
 
     .esa-copyright {
         a {
@@ -860,10 +884,14 @@ a {
 }
 
 /* 博主头像 */
-.esa-profile-avatar {
-    margin-top: 15px;
-    border-radius: 3px;
-    width: 100%;
+.profile-avatar {
+    text-align: center;
+
+    .esa-profile-avatar {
+        margin-top: 15px;
+        border-radius: 3px;
+        width: 100px;
+    }
 }
 
 .esa-follow-button {
@@ -1332,7 +1360,6 @@ a {
 
     .comment_textarea {
         width: 100% !important;
-        height: 200px !important;
         border: 1px solid @blog-border-color;
         border-radius: 6px;
         padding: 5px;

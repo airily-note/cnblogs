@@ -126,7 +126,7 @@
             let $win = $(window);
             if ($win.width() > 767) {
                 $(this.cnblogs.forFlow).css({
-                    marginLeft: '22em'
+                    marginLeft: '17em'
                 });
                 $(this.cnblogs.sideBar).fadeIn(600);
             }
@@ -623,7 +623,7 @@
             const avatar = this.defaluts.avatar;
             const favicon = this.defaluts.favicon;
             if (!this.isPostPage && avatar) {
-                $(this.cnblogs.sideBarMain).prepend(`<img class="esa-profile-avatar" src="${avatar}" />`);
+                $(this.cnblogs.sideBarMain).prepend(`<div class="profile-avatar"><img class="esa-profile-avatar" src="${avatar}" /></div>`);
             };
             if (favicon) {
                 $('head').append(`<link rel="shortcut icon" href="${favicon}" type="image/x-icon" />`);
